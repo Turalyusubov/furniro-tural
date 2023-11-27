@@ -1,8 +1,9 @@
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useData } from "../../context/AppContext";
 import { Link } from "react-router-dom";
+import { CartItemType } from "../../interfaces";
 
-export default function CartModalItem({ p }) {
+export default function CartModalItem({ p }: { p: CartItemType }) {
     const { removeFromCart, setIsCartOpen } = useData()
 
     return (
