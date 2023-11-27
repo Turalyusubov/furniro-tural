@@ -54,7 +54,7 @@ export default function HomeSlider() {
                 <ul style={{ margin: "0px" }}> {dots} </ul>
             </div>
         ),
-        customPaging: (i: number) => (
+        customPaging: (_: number) => (
             <div className="dot-border">
                 <div className='slider-dot'>
                 </div>
