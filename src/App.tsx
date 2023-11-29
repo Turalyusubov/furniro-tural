@@ -1,23 +1,22 @@
-import { Route, Routes } from "react-router-dom"
-import Footer from "./layout/Footer"
+import {
+  CartModal,
+  AddToCartModal,
+  ScrollToTop
+} from "@/components"
+import { AppProvider } from "./context/AppContext"
+import { ToastContainer } from "react-toastify"
+import { routes } from "@/router/routes"
+import { useRoutes } from "react-router-dom"
 import Navbar from "./layout/Navbar"
-import HomePage from "./pages/HomePage"
-import ShopPage from "./pages/ShopPage"
-import ProductPage from "./pages/ProductPage"
-import CartPage from "./pages/CartPage"
-import CheckoutPage from "./pages/CheckoutPage"
-import ContactPage from "./pages/ContactPage"
-import BlogPage from "./pages/BlogPage"
-import CartModal from "./components/CartModal"
-import NotFound from "./pages/NotFound"
-import AuthPage from "./pages/Authentification/AuthPage"
-import WishlistPage from "./pages/WishlistPage"
-import AddToCartModal from "./components/AddToCartModal"
+import Footer from "./layout/Footer"
+import { Suspense } from "react"
+
 
 function App() {
+  const routing = useRoutes(routes)
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="shop" element={<ShopPage />} />
@@ -30,9 +29,21 @@ function App() {
         <Route path="wishlist" element={<WishlistPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
-      <CartModal />
-      <AddToCartModal />
+      // <Footer /> */}
+
+
+      <AppProvider>
+        <Suspense fallback={<>Loading...</>}>
+          <Navbar />
+          {routing}
+          <Footer />
+          <ToastContainer />
+          <ScrollToTop />
+          <CartModal />
+          <AddToCartModal />
+        </Suspense>
+      </AppProvider>
+
     </>
   )
 }

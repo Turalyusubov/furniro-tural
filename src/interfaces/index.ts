@@ -28,6 +28,18 @@ export interface NavMenuItemType {
     path: string;
 } // navbar.tsx
 
+export interface CartModalItemProps {
+    p: CartItemType;
+}
+
+export interface CartPageItemProps {
+    cartItem: CartItemType
+}
+
+export interface ProductFeaturesComponentProps {
+    isPage: boolean
+}
+
 export interface AppContextType {
     isCartOpen: boolean;
     setIsCartOpen: Dispatch<SetStateAction<boolean>>;
