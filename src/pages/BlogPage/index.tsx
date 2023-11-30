@@ -3,10 +3,9 @@ import {
     PageHeading,
     Pagination
 } from '@/components'
-// import { UpperFooter } from '@/layout'
 import blogImg from '../../assets/img/blog/1.jpg'
-import { BsSearch } from 'react-icons/bs'
-// import UpperFooter from '@/layout/UpperFooter'
+import Search from '../../assets/icons/search.svg'
+import UpperFooter from '@/layout/UpperFooter'
 
 
 const BlogPage: React.FC = () => {
@@ -22,7 +21,8 @@ const BlogPage: React.FC = () => {
                 </div>
                 <div className="w-full order-first lg:order-last lg:sticky top-8 self-start lg:w-3/12">
                     <div className="relative mb-6">
-                        <BsSearch className='absolute right-3 top-4 text-xl' />
+                        {/* <BsSearch className='absolute right-3 top-4 text-xl' /> */}
+                        <img className='absolute right-3 top-3' src={Search} alt="search" />
                         <input className="border border-[#9F9F9F] rounded-lg w-full focus:outline-none p-3" type="text" />
                     </div>
                     <div className="flex flex-col gap-20">
@@ -72,7 +72,7 @@ const BlogPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* <UpperFooter /> */}
+            <UpperFooter />
         </>
     )
 }

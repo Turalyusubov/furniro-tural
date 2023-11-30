@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import Heart from '../../assets/icons/producthover/heart.svg'
-import { FaHeart } from "react-icons/fa";
 import Share from '../../assets/icons/producthover/share.svg'
 import { ProductCardProps } from '../../interfaces'
 import { useData } from '../../context/AppContext'
@@ -102,7 +101,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                             <span>Share</span>
                         </button>
                         <button onClick={(event) => handleAddToWishlist(event)} className="flex items-center gap-1">
-                            {isInWishlist({ product }) ? <img loading="lazy" src={Heart} alt="share" /> : <FaHeart />}
+                            {isInWishlist({ product }) ? <img loading="lazy" src={Heart} alt="share" /> : '❤'}
                             <span>{isInWishlist({ product }) ? 'Like' : 'Unlike'}</span>
                         </button>
                     </div>

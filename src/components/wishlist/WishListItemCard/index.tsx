@@ -1,9 +1,9 @@
-import { AiFillCloseCircle } from 'react-icons/ai'
 import { WishlistItemCardProps } from '../../../interfaces'
 import { useData } from '../../../context/AppContext'
 import { Link } from 'react-router-dom'
 
 const WishlistItemCard: React.FC<WishlistItemCardProps> = ({ product }) => {
+    console.log(product)
 
     const { removeFromWishlist } = useData()
     return (
@@ -14,7 +14,7 @@ const WishlistItemCard: React.FC<WishlistItemCardProps> = ({ product }) => {
                 <p>{product.price} Rp</p>
             </div>
             <button onClick={() => removeFromWishlist({ product })}>
-                <AiFillCloseCircle className='text-2xl text-neutral-500' />
+                <span className='text-2xl text-neutral-500'>✖</span>
             </button>
         </div>
     )

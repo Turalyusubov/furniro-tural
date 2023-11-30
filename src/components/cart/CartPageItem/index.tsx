@@ -1,4 +1,4 @@
-import { FaTrash } from 'react-icons/fa'
+import Trash from '../../../assets/icons/trash.svg'
 import { CartPageItemProps } from '../../../interfaces'
 import { Link } from 'react-router-dom'
 import { useData } from '../../../context/AppContext'
@@ -34,7 +34,9 @@ const CartPageItem: React.FC<CartPageItemProps> = ({ cartItem }) => {
                 <p>Rs. {cartItem?.product?.price * cartItem?.features?.quantity}</p>
             </div>
             <div className="text-ochre text-2xl flex items-center justify-center">
-                <button onClick={() => removeFromCart(cartItem.id)}><FaTrash /></button>
+                <button onClick={() => removeFromCart(cartItem.id)}>
+                    <img src={Trash} alt="trash" />
+                </button>
             </div>
         </div>
     )

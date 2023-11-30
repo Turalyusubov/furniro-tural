@@ -2,8 +2,7 @@ import { useRef } from 'react'
 import Slider1 from '../../../assets/img/home-slider/slider1.png'
 import Slider2 from '../../../assets/img/home-slider/slider2.png'
 import Slider3 from '../../../assets/img/home-slider/slider3.png'
-import { BsArrowRight } from 'react-icons/bs'
-import { SlArrowRight, SlArrowLeft } from 'react-icons/sl'
+import SliderArrow from '../../../assets/icons/slider/slider-arrow.svg'
 import Slider from "react-slick";
 import { SlideItemType } from '../../../interfaces'
 import '../../../slick/slick.css'
@@ -105,14 +104,21 @@ const HomeSlider: React.FC = () => {
                                     <span className='text-[#616161] font-medium'>{slide.id} - {slide.title}</span>
                                     <span className='text-[#3A3A3A] font-semibold text-3xl'>{slide.category}</span>
                                 </div>
-                                <button className='text-2xl -translate-x-28 z-0 text-white bg-ochre h-1/2 p-3'><BsArrowRight /></button>
+                                <button className='-translate-x-28 z-0 bg-ochre text-white text-2xl p-3'>
+                                    {/* <img className='w-full h-full' src={SliderItemArrow} alt="arrow" /> */}
+                                    →
+                                </button>
                             </div>
                         </div>
                     ))}
                 </Slider>
                 <div className="flex absolute lg:-left-5 top-1/2 justify-between w-full text-ochre text-sm">
-                    <button onClick={() => (slider?.current as any)?.slickPrev()} className={` bg-white rounded-full h-10 w-10 flex justify-center items-center shadow-lg hover:bg-neutral-100 duration-300`}><SlArrowLeft /></button>
-                    <button onClick={() => (slider?.current as any)?.slickNext()} className={`bg-white rounded-full h-10 w-10 flex justify-center items-center shadow-lg hover:bg-neutral-100 duration-300`}><SlArrowRight /></button>
+                    <button onClick={() => (slider?.current as any)?.slickPrev()} className={` bg-white rounded-full h-10 w-10 flex justify-center items-center shadow-lg hover:bg-neutral-100 duration-300`}>
+                        <img className='rotate-180' src={SliderArrow} alt="arrow" />
+                    </button>
+                    <button onClick={() => (slider?.current as any)?.slickNext()} className={`bg-white rounded-full h-10 w-10 flex justify-center items-center shadow-lg hover:bg-neutral-100 duration-300`}>
+                        <img src={SliderArrow} alt="arrow" />
+                    </button>
                 </div>
             </div>
 

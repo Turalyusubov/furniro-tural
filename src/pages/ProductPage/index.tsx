@@ -2,8 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import Arrow from '../../assets/icons/arrow-to-right.svg'
 import Sofa from '../../assets/img/product-single/sofa.png'
 import Stars from '../../assets/img/product-single/stars.png'
-import { BiLogoFacebookCircle } from 'react-icons/bi'
-import { AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai'
+import Facebook from '../../assets/icons/social-media/facebook.svg'
+import Linkedin from '../../assets/icons/social-media/linkedin.svg'
+import Twitter from '../../assets/icons/social-media/twitter.svg'
 import { useEffect, useState } from "react";
 import Product1 from '../../assets/img/products/product1.png'
 import Product2 from '../../assets/img/products/product2.png'
@@ -116,13 +117,13 @@ const ProductPage: React.FC = () => {
                             <span>:</span>
                             <div className="text-black flex gap-4 text-2xl">
                                 <a href="#">
-                                    <BiLogoFacebookCircle />
+                                    <img src={Facebook} alt="facebook" />
                                 </a>
                                 <a href="#">
-                                    <AiFillLinkedin />
+                                    <img src={Linkedin} alt="linkedin" />
                                 </a>
                                 <a href="#">
-                                    <AiFillTwitterCircle />
+                                    <img src={Twitter} alt="twitter" />
                                 </a>
                             </div>
                         </div>

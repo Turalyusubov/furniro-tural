@@ -1,7 +1,6 @@
 import { useData } from "../../../context/AppContext";
 import { CartModalItemProps } from "../../../interfaces";
 import { Link } from "react-router-dom";
-import { AiFillCloseCircle } from "react-icons/ai";
 
 const CartModalItem: React.FC<CartModalItemProps> = ({ p }) => {
     const { removeFromCart, setIsCartOpen } = useData()
@@ -20,7 +19,7 @@ const CartModalItem: React.FC<CartModalItemProps> = ({ p }) => {
                 </div>
             </div>
             <button onClick={() => removeFromCart(p.id)} className='text-[#9F9F9F] text-2xl'>
-                <AiFillCloseCircle />
+                ✖
             </button>
         </div>
     )

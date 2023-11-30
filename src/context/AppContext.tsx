@@ -33,7 +33,6 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         if (!wishlist.some(p => p.product.id === product.id)) {
             setWishlist((prev) => {
                 const updatedWishlist = [...prev, { product }] as WishlistItemType[]
-                localStorage.setItem('furniroWishlist', JSON.stringify(updatedWishlist));
                 return updatedWishlist
             });
         }
@@ -124,6 +123,10 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     useEffect(() => {
         localStorage.setItem('furniroCart', JSON.stringify(cartItems));
     }, [cartItems])
+
+    useEffect(() => {
+        localStorage.setItem('furniroWishlist', JSON.stringify(wishlist));
+    }, [wishlist])
 
     const states: AppContextType =
     {

@@ -4,8 +4,7 @@ import User from '../../assets/icons/user.svg'
 import Cart from '../../assets/icons/cart.svg'
 import Fav from '../../assets/icons/fav.svg'
 import Search from '../../assets/icons/search.svg'
-import { IoCloseOutline } from "react-icons/io5";
-import { BiMenuAltRight } from 'react-icons/bi'
+import Menu from '../../assets/icons/burger-menu.svg'
 import { useData } from '../../context/AppContext';
 import { useEffect } from 'react';
 import { NavMenuItemType } from '../../interfaces';
@@ -91,10 +90,10 @@ const Navbar: React.FC = () => {
                         }
                     </button>
                 </div>
-                <button className='lg:hidden text-4xl' onClick={() => setIsNavOpen(prev => !prev)}>
+                <button className='lg:hidden text-3xl' onClick={() => setIsNavOpen(prev => !prev)}>
                     {
-                        isNavOpen ? <IoCloseOutline /> :
-                            <BiMenuAltRight />
+                        isNavOpen ? '✖' :
+                            <img className='w-9' src={Menu} alt="menu" />
                     }
                 </button>
             </div>
