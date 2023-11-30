@@ -10,6 +10,7 @@ import { useRoutes } from "react-router-dom"
 import Navbar from "./layout/Navbar"
 import Footer from "./layout/Footer"
 import { Suspense } from "react"
+import { LoadingPage } from "@/pages"
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <AppProvider>
-        <Suspense fallback={<>Loading...</>}>
+        <Suspense fallback={<LoadingPage />}>
           <Navbar />
           {routing}
           <Footer />

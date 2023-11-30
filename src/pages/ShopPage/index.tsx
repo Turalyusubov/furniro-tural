@@ -4,8 +4,8 @@ import {
     Pagination,
     ProductCard
 } from "@/components";
+import UpperFooter from "@/layout/UpperFooter";
 import products from "../../data/products";
-// import { UpperFooter } from "@/layout";
 
 const ShopPage: React.FC = () => {
 
@@ -18,7 +18,7 @@ const ShopPage: React.FC = () => {
             </div>
             <Pagination />
             <div className="mb-20"></div>
-            {/* <UpperFooter /> */}
+            <UpperFooter />
         </>
     )
 }

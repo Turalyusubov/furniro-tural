@@ -6,6 +6,7 @@ const AddToCartModal: React.FC = () => {
     const {
         toggleCartModal,
         setToggleCartModal,
+        productForModal
     } = useData()
 
     const handleBackgroundClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -39,7 +40,9 @@ const AddToCartModal: React.FC = () => {
 
     return (
         <div onClick={(event) => handleBackgroundClick(event)} className={`${toggleCartModal ? '' : 'hidden'} parent-div fixed flex flex-col items-center justify-center inset-0 bg-black bg-opacity-60`}>
-            <div className="bg-white flex flex-col gap-4 rounded-lg p-10">
+            <div className="bg-white flex flex-col gap-4 rounded-lg p-10 relative">
+                <button onClick={() => setToggleCartModal(false)} className="absolute top-2 right-2 bg-gray-200 rounded-full w-7 h-7 flex items-center justify-center">✖</button>
+                <p className="text-center font-semibold text-xl">{productForModal?.title}</p>
                 <ProductFeaturesComponent isPage={false} />
             </div>
         </div>

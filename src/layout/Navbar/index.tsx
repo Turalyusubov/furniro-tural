@@ -71,9 +71,9 @@ const Navbar: React.FC = () => {
                     <Link to='/auth'>
                         <img loading="lazy" src={User} alt="user" />
                     </Link>
-                    <button>
+                    <Link to='/search'>
                         <img loading="lazy" src={Search} alt="search" />
-                    </button>
+                    </Link>
                     <Link className='relative' to='/wishlist'>
                         <img loading="lazy" src={Fav} alt="fav" />
                         {wishlist.length > 0 && <span className='absolute bg-ochre text-xs text-white rounded-full w-6 h-6 flex items-center justify-center -top-2 -right-3'>
@@ -105,9 +105,9 @@ const Navbar: React.FC = () => {
                     <Link onClick={() => setIsNavOpen(false)} to='/auth'>
                         <img loading="lazy" src={User} alt="user" />
                     </Link>
-                    <button>
+                    <Link to='/search'>
                         <img loading="lazy" src={Search} alt="search" />
-                    </button>
+                    </Link>
                     <Link className='relative' onClick={() => setIsNavOpen(false)} to='/wishlist'>
                         <img loading="lazy" src={Fav} alt="fav" />
                         {

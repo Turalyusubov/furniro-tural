@@ -1,4 +1,16 @@
-import { AuthPage, BlogPage, CartPage, CheckoutPage, ContactPage, HomePage, NotFound, ProductPage, ShopPage, WishlistPage } from "@/pages";
+import {
+    AuthPage,
+    BlogPage,
+    CartPage,
+    CheckoutPage,
+    ContactPage,
+    HomePage,
+    NotFound,
+    ProductPage,
+    SearchPage,
+    ShopPage,
+    WishlistPage
+} from "@/pages";
 
 export const routes = [
     {
@@ -36,6 +48,10 @@ export const routes = [
     {
         path: "/wishlist",
         element: <WishlistPage />
+    },
+    {
+        path: "/search",
+        element: <SearchPage />
     },
     {
         path: "*",

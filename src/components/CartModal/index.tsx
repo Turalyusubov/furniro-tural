@@ -9,6 +9,7 @@ const CartModal: React.FC = () => {
         isCartOpen,
         setIsCartOpen,
         isNavOpen,
+        setIsNavOpen,
         cartItems
     } = useData()
 
@@ -42,7 +43,7 @@ const CartModal: React.FC = () => {
     };
 
     return (
-        <div onClick={(event) => handleBackgroundClick(event)} className={`${!isCartOpen ? 'hidden' : 'block'} parent-cart-div fixed inset-0 duration-300 z-30  bg-black bg-opacity-50`}>
+        <div onClick={(event) => handleBackgroundClick(event)} className={`${!isCartOpen ? 'translate-x-[100%] bg-opacity-0' : 'translate-x-0 bg-opacity-50'}  parent-cart-div fixed inset-0 duration-700 z-30 bg-black `}>
             <div className={`${!isCartOpen ? 'right-[-100%] w-0 overflow-hidden' : 'right-0 w-full lg:w-[30%]'}  bg-white fixed h-screen py-5 px-8`}>
                 <div className="flex justify-between items-center">
                     <p className='font-semibold text-2xl'>Shopping Cart</p>
@@ -62,8 +63,14 @@ const CartModal: React.FC = () => {
                     </div>
                 </div>
                 <div className="text-sm flex w-full gap-4 border-t border-t-[#D9D9D9] py-10">
-                    <Link onClick={() => setIsCartOpen(false)} to='/cart' className='border w-1/2 border-black rounded-full p-1 text-center'>Cart</Link>
-                    <Link onClick={() => setIsCartOpen(false)} to='/checkout' className='border w-1/2 text-center border-black rounded-full p-1'>Checkout</Link>
+                    <Link onClick={() => {
+                        setIsNavOpen(false)
+                        setIsCartOpen(false)
+                    }} to='/cart' className='border w-1/2 border-black rounded-full p-1 text-center'>Cart</Link>
+                    <Link onClick={() => {
+                        setIsNavOpen(false)
+                        setIsCartOpen(false)
+                    }} to='/checkout' className='border w-1/2 text-center border-black rounded-full p-1'>Checkout</Link>
                 </div>
             </div>
         </div>

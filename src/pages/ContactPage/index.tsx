@@ -3,7 +3,7 @@ import Phone from '../../assets/icons/contact/phone.svg'
 import Clock from '../../assets/icons/contact/clock.svg'
 
 import { PageHeading } from '@/components'
-// import { UpperFooter } from '@/layout'
+import UpperFooter from '@/layout/UpperFooter'
 
 const ContactPage: React.FC = () => {
     return (
@@ -61,7 +61,7 @@ const ContactPage: React.FC = () => {
                     </form>
                 </div>
             </div>
-            {/* <UpperFooter /> */}
+            <UpperFooter />
         </>
     )
 }

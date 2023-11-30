@@ -25,6 +25,8 @@ const NotFound = lazy(() => import("./NotFound"))
 const ProductPage = lazy(() => import("./ProductPage"))
 const WishlistPage = lazy(() => import("./WishlistPage"))
 const ShopPage = lazy(() => import("./ShopPage"))
+const LoadingPage = lazy(() => import("./LoadingPage"))
+const SearchPage = lazy(() => import("./SearchPage"))
 
 export {
     AuthPage,
@@ -38,5 +40,7 @@ export {
     NotFound,
     ProductPage,
     WishlistPage,
-    ShopPage
+    ShopPage,
+    LoadingPage,
+    SearchPage
 }
