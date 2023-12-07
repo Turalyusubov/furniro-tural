@@ -105,7 +105,6 @@ const HomeSlider: React.FC = () => {
                                     <span className='text-[#3A3A3A] font-semibold text-3xl'>{slide.category}</span>
                                 </div>
                                 <button className='-translate-x-28 z-0 bg-ochre text-white text-2xl p-3'>
-                                    {/* <img className='w-full h-full' src={SliderItemArrow} alt="arrow" /> */}
                                     →
                                 </button>
                             </div>

@@ -113,3 +113,7 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slick-arrow {
+    display: none !important;
+}

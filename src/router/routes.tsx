@@ -11,6 +11,7 @@ import {
     ShopPage,
     WishlistPage
 } from "@/pages";
+// import TestPage from "@/pages/TestPage";
 
 export const routes = [
     {
@@ -53,6 +54,10 @@ export const routes = [
         path: "/search",
         element: <SearchPage />
     },
+    // {
+    //     path: "/test",
+    //     element: <TestPage />
+    // },
     {
         path: "*",
         element: <NotFound />

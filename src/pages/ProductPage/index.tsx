@@ -68,22 +68,22 @@ const ProductPage: React.FC = () => {
     return (
         <>
             <div className="bg-[#F9F1E7] text-[#9F9F9F] w-full p-8 lg:py-10 lg:px-20 flex gap-2 lg:gap-6">
-                <Link to='/'>Home</Link>
+                <Link className="flex items-center" to='/'>Home</Link>
                 <img loading="lazy" src={Arrow} alt="arrow" />
-                <Link to='/shop'>Shop</Link>
+                <Link className="flex items-center" to='/shop'>Shop</Link>
                 <img loading="lazy" src={Arrow} alt="arrow" />
                 <span className="w-[2px] bg-[#9F9F9F]"></span>
                 <span className="text-black">Asgaard sofa</span>
             </div>
-            <div className="p-8 lg:px-20 lg:py-10 flex flex-col lg:flex-row gap-20">
-                <div className="flex w-full lg:w-1/2 gap-10">
-                    <div className="flex flex-col gap-6 w-2/12">
-                        <img loading="lazy" className="bg-[#F9F1E7] h-24 w-24 rounded-xl" src={Sofa} alt="sofa" />
-                        <img loading="lazy" className="bg-[#F9F1E7] h-24 w-24 rounded-xl" src={Sofa} alt="sofa" />
-                        <img loading="lazy" className="bg-[#F9F1E7] h-24 w-24 rounded-xl" src={Sofa} alt="sofa" />
-                        <img loading="lazy" className="bg-[#F9F1E7] h-24 w-24 rounded-xl" src={Sofa} alt="sofa" />
+            <div className="p-8 lg:px-20 lg:py-10 flex flex-col lg:flex-row gap-10 sm:gap-20">
+                <div className="flex flex-col sm:flex-row w-full lg:w-1/2 gap-4 sm:gap-10">
+                    <div className="grid grid-cols-4 sm:flex sm:flex-col gap-2 sm:gap-6 w-full sm:w-2/12">
+                        <img loading="lazy" className="bg-[#F9F1E7] object-cover h-16 sm:h-24 w-full sm:w-24 rounded-lg sm:rounded-xl" src={Sofa} alt="sofa" />
+                        <img loading="lazy" className="bg-[#F9F1E7] object-cover h-16 sm:h-24 w-full sm:w-24 rounded-lg sm:rounded-xl" src={Sofa} alt="sofa" />
+                        <img loading="lazy" className="bg-[#F9F1E7] object-cover h-16 sm:h-24 w-full sm:w-24 rounded-lg sm:rounded-xl" src={Sofa} alt="sofa" />
+                        <img loading="lazy" className="bg-[#F9F1E7] object-cover h-16 sm:h-24 w-full sm:w-24 rounded-lg sm:rounded-xl" src={Sofa} alt="sofa" />
                     </div>
-                    <img loading="lazy" className="bg-[#F9F1E7] w-9/12 object-cover rounded-xl h-[70vh]" src={thisProduct?.image} alt={thisProduct?.title + "_image"} />
+                    <img loading="lazy" className="bg-[#F9F1E7] order-first sm:order-last w-full sm:w-9/12 object-cover rounded-lg sm:rounded-xl h-[50vh] sm:h-[70vh]" src={thisProduct?.image} alt={thisProduct?.title + "_image"} />
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col gap-5">
                     <h3 className="text-[42px]">{thisProduct?.title}</h3>

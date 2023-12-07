@@ -37,7 +37,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
             });
         }
         toast.success(`${product.title} was successfully added to wishlist!`, {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -67,7 +67,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
                         item))
         }
         toast.success(`${cartProduct.product.title}(${cartProduct.features.color}/${cartProduct.features.size}) was successfully added to cart!`, {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -86,7 +86,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
             });
         }
         toast.info(`${product.title} was successfully removed from wishlist!`, {
-            position: "top-right",
+            position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
@@ -105,7 +105,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
             });
         }
         toast.info(`Product was successfully removed from cart!`, {
-            position: isCartOpen ? "top-left" : "top-right",
+            position: isCartOpen ? "bottom-left" : "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,

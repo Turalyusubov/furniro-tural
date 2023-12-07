@@ -8,7 +8,6 @@ import UpperFooter from "@/layout/UpperFooter";
 import products from "../../data/products";
 
 const ShopPage: React.FC = () => {
-
     return (
         <>
             <PageHeading mainhead='Shop' />
